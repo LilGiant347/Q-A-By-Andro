@@ -1,0 +1,2217 @@
+echo off
+:c
+cd C:\Windows\System32
+cls
+goto STARTHERE
+
+
+:forget
+cls
+echo wew, i'v never seen a person like you before!
+timeout /nobreak /t 5 >null
+cls
+echo so what should i call you then?
+set /p name=Answer: 
+cls
+echo okay
+timeout /nobreak /t 1 >null
+goto Q1
+
+
+:STARTHERE
+echo Hello!
+echo.
+echo press any key
+pause >null
+cls
+echo What's Your Name?
+echo.
+echo (1). Forgot Name
+set /p name=My name is: 
+if %name% == 1 goto forget
+
+
+cls
+echo Oh, Hi %name%.
+echo My name is andro!
+
+echo press any key
+pause >null
+
+:Q1
+cls
+echo So %name%, do you like ice cream?
+set /p ice=Answer(answer with Y/N): 
+
+cls
+if  %ice% == Y GOTO Y1
+if  %ice% == y GOTO Y1
+if  %ice% == N GOTO N1
+if  %ice% == n GOTO N1
+echo Sorry '%ice%' is not a valid answer please try again. :)
+timeout /nobreak /t 5 >null
+goto Q1
+
+:N1
+cls
+echo Why not?
+set /p whynot=Answer: 
+cls
+echo okay then..
+timeout /nobreak /t 3 >null
+goto Q2
+
+:Y1
+cls
+echo Me too! what ice cream flavor do you like?
+set /p flavor=Answer: 
+
+cls
+echo I like Ice cream %flavor% too!
+timeout /nobreak /t 3 >null
+
+:Q2
+cls
+echo How is your day %name%?
+echo.
+echo (1). Fine
+echo (2). Horible
+set /p day=Answer(1/2): 
+
+cls
+if %day% == 1 goto good
+if %day% == 2 goto bad
+echo Sorry %name%, but "%day%" is not a valid answer.. or maybe it does.
+echo But i can't devine it sorry.. please try again.
+timeout /nobreak /t 7 >null
+goto Q2
+
+:bad
+cls
+echo What's wrong %name%? :(
+set /p problem=Answer: 
+
+:Q3
+cls
+echo hmmm..
+echo can i help you fix that? "%problem%"
+echo (1). Yes
+echo (2). No
+echo (3). Maybe
+echo (4). I don't think so
+set /p problem2=Answer:
+
+cls
+if %problem2% == 1 goto Y2
+if %problem2% == 2 goto N2
+if %problem2% == 3 goto M1
+if %problem2% == 4 goto idk1
+echo Sorry %name%, But i don't think '%problem2%" is the right answer, so please try again. :)
+timeout /nobreak /t 5 >null
+goto Q3
+
+:Y2
+cls
+echo How?
+set /p how=Answer: 
+cls
+echo okay so i can't help you now for "%how%"
+echo maybe i will help you later :)
+timeout /nobreak /t 7 >null
+cls
+echo let's go to the next question
+timeout /nobreak /t 3 >null
+cls
+goto Q5
+
+:N2
+cls
+echo Okay then..
+timeout /nobreak /t 3 >null
+goto Q5
+
+:M1
+cls
+echo How?
+set /p how=Answer: 
+
+:Q4
+cls
+echo i'll help you later okay?
+set /p okay=Answer(Y/N): 
+
+if %okay% == Y goto Y3
+if %okay% == y goto Y3
+if %okay% == N goto N3
+if %okay% == n goto N3
+echo Sorry but "%okay%" is not a valid answer, let's go try again.
+goto Q4
+
+:Y3
+cls
+echo good, let's go to the next answer
+timeout /nobreak /t 3 >null
+goto Q5
+
+:N3
+cls
+echo why not?
+set /p why=Answer: 
+cls
+echo okay okay i'll help you with that later okay
+echo now let's go back to the main question..
+timeout /nobreak /t 7 >null
+goto Q5
+
+:idk1
+cls
+echo hmmm..
+timeout /nobreak /t 2 >null
+goto Q5
+
+:good
+echo My day is good too :)
+timeout /nobreak /t 3 >null
+goto Q5
+
+:Q5
+cls
+echo Do you know how old i am? (Maker)
+set /p doyou=Answer(Y/N): 
+
+if %doyou% == Y goto Y4
+if %doyou% == y goto Y4
+if %doyou% == N goto N4
+if %doyou% == n goto N4
+cls
+echo Im so sorry %name%, but "%doyou%" is not a valid answer for me to read
+echo So please try again.
+timeout /nobreak /t 6 >null
+goto Q5
+
+:N4
+cls
+echo Im 14 years old!
+echo How old are you?
+set /p age=Answer: 
+cls
+
+:Q6
+echo it's "%age%"?
+set /p Q6=Answer(Y/N): 
+if %Q6% == Y GOTO Y5
+if %Q6% == y GOTO Y5
+if %Q6% == N GOTO N5
+if %Q6% == n GOTO N5
+echo sorry %name%, but "%Q6%" is not the right answer let's go try again.
+timeout /nobreak /t 6 >null
+goto Q6
+
+:Y4
+cls
+echo how old am i?
+set /p howold=Answer: 
+if %howold% == 14 goto RIGHT
+cls
+echo i thought you know it right.. -_-
+timeout /nobreak /t 4 >null
+goto N4
+
+:RIGHT
+cls
+echo how did you know it right? lol. XD
+timeout /nobreak /t 4 >null
+goto Q7
+
+:N5
+cls
+echo what it is then?
+set /p age=Answer: 
+cls
+goto Q6
+
+
+:Y5
+cls
+echo okay.
+timeout /nobreak /t 1 >null
+
+:Q7
+cls
+echo do you like coding?
+set /p likecoding=Answer(Y/N): 
+
+if %likecoding% == Y goto Y6
+if %likecoding% == y goto Y6
+if %likecoding% == N goto N6
+if %likecoding% == n goto N6
+echo Sorry %name%, but "%likecoding%" is not a valid answer
+echo Please answer with "Y" or "N" let's go try again.
+timeout /nobreak /t 8 >null
+goto Q7
+
+:N6
+cls
+echo okay.
+timeout /nobreak /t 1 >null
+echo i think our qonversation end here...
+timeout /nobreak /t 1 >null
+echo bye see you again.. :)
+timeout /nobreak /t 2 >null
+cls
+:goto END
+
+:Y6
+cls
+echo if you like coding do you want to see this program line codes?
+echo it's just some couple line
+set /p seeit=Answer(Y/N): 
+
+if %seeit% == Y goto Y7
+if %seeit% == y goto Y7
+if %seeit% == N goto N6
+if %seeit% == n goto N6
+
+:Y7
+cls
+echo Okay.
+echo Let's see it.
+timeout /nobreak /t 3 >null
+echo But i'll show you afther the outro :)
+timeout /nobreak /t 4 >null
+goto END2
+
+:END
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                               Thanks to:                                    O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                               Thanks to:                                    O
+echo O                    Mas dhika For the support and love                       O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                               Thanks to:                                    O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                               Thanks to:                                    O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                               Thanks to:                                    O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                               Thanks to:                                    O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 3 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O          TTTTTTTTTTTTTTTTTTT   HHH       HHH  XXX       XXX                 O
+echo O                  TTT           HHH       HHH   XXX     XXX                  O
+echo O                  TTT           HHH       HHH    XXX   XXX                   O
+echo O                  TTT           HHH       HHH     XXX XXX                    O
+echo O                  TTT           HHH       HHH      XXXXX                     O
+echo O                  TTT           HHHHHHHHHHHHH       XXX                      O
+echo O                  TTT           HHH       HHH      XXXXX                     O
+echo O                  TTT           HHH       HHH     XXX XXX                    O
+echo O                  TTT           HHH       HHH    XXX   XXX                   O
+echo O                  TTT           HHH       HHH   XXX     XXX                  O
+echo O                  TTT           HHH       HHH  XXX       XXX                 O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 5 >null
+exit
+
+
+
+
+:END2
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                               Thanks to:                                    O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                               Thanks to:                                    O
+echo O                    Mas dhika For the support and love                       O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                               Thanks to:                                    O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                               Thanks to:                                    O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                               Thanks to:                                    O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                               Thanks to:                                    O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                            Created by Andro                                 O
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                             Coding: Andro                                   O
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                            Publisher: Andro                                 O
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                              Songs: Andro                                   O
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                               Idea: Andro                                   O
+echo O                                                                             O
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                             Special Thanks to:                              O
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                    Mas dhika For the support and love                       O
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                   Mbak ndaru For the support and love                       O
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                    Mbak anin For the support and love                       O
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                         Papi For the support and love                       O
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                        Mami For the support and prays                       O
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                             Jari jemari ku yang kecil                       O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 1 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 3 >null
+cls
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O          TTTTTTTTTTTTTTTTTTT   HHH       HHH  XXX       XXX                 O
+echo O                  TTT           HHH       HHH   XXX     XXX                  O
+echo O                  TTT           HHH       HHH    XXX   XXX                   O
+echo O                  TTT           HHH       HHH     XXX XXX                    O
+echo O                  TTT           HHH       HHH      XXXXX                     O
+echo O                  TTT           HHHHHHHHHHHHH       XXX                      O
+echo O                  TTT           HHH       HHH      XXXXX                     O
+echo O                  TTT           HHH       HHH     XXX XXX                    O
+echo O                  TTT           HHH       HHH    XXX   XXX                   O
+echo O                  TTT           HHH       HHH   XXX     XXX                  O
+echo O                  TTT           HHH       HHH  XXX       XXX                 O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo O                                                                             O
+echo OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+timeout /nobreak /t 5 >null
+:d
+cd D:\! FOLDER BERSAMA\0. Family Folder\CMD
+start CODELINE.txt
